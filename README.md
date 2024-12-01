@@ -32,6 +32,22 @@
 |man_3_printf| Assign document| _printf Manual.|
 |README.md|Main file| Document read me file.| 
 ---
+**_printf Flowchart**
+* The machine begins its work.
+* Iterate Print: The machine starts looking at each letter or symbol in the text we want to print.
+* Is it a %? The machine checks if the current letter is a percent sign (%).
+* If yes: It looks at the next letter.
+* If the next letter is also %: It prints a single % symbol.
+* If the next letter is different: It looks for a special instruction to know what to print.
+* If no: It prints the current letter.
+* Find Special Instruction: The machine checks a list of special instructions to see if there's one for the letter after the %.
+  * If it finds one, it follows that instruction.
+* Print According to Instruction: If it found a special instruction, the machine prints what the instruction says (like a number, a word, etc.).
+* If the machine has checked all the letters, it stops printing.
+* Error: If the machine doesn't understand an instruction, it shows an error message.
+
+  ![image](https://github.com/hruiz1191/holbertonschool-printf/blob/hector/printfflowchart.png)
+--- 
 **Authors**
 * **Hector Ruiz** [Github](https://github.com/hruiz1191)
 * **Fernando Albert** [Github](https://github.com/Falbert19)
