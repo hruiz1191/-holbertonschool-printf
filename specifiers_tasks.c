@@ -4,8 +4,8 @@
 
 /**
  * handle_specifier - helper function for formats specifier
- * @spec: The specifier character
- * @args: The argument list
+ * @spec: specified character
+ * @args: argument list
  *
  * Return: the specified format
  */
@@ -13,13 +13,16 @@
 int handle_specifier(char spec, va_list args)
 {
 	if (spec == 'c')
-		return (print_char(va_arg(args, int)));
+		return (print_char(args));
 
 	else if (spec == 's')
-		return (print_string(va_arg(args, char *)));
+		return (print_string(args));
 
 	else if (spec == '%')
-		return (write(1, "%", 1));
+		return (_putchar('%'));
+
+	else if (spec == 'd' || spec == 'i')
+		return (print_number(args));
 
 	return (0);
 }
